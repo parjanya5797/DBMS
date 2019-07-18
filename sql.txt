@@ -11,7 +11,6 @@ EmployeeName,
 Post,
 address
 ) VALUES ('1','Raju Rastogi','Barber','India');
-
 Alter Table Employee add PRIMARY KEY(EmpId);
 
 Alter Table Employee add Salary decimal;
@@ -44,4 +43,6 @@ address,
 salary
 ) VALUES ('1','Raju','Manager','India','5000');
 
-UPDATE Employee SET salary=salary+5000 WHERE Post="Manager" OR Salary>=5000;
+UPDATE Employee SET salary=salary+5000 WHERE Post="Manager" OR Salary>=10000;
+DELETE FROM Employee where Empid='1';
+ALter table employee ADD Empid int NOT NULL AUTO_INCREMENT;
