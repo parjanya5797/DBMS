@@ -1,0 +1,47 @@
+CREATE TABLE employee(
+Empid int ,
+EmployeeName varchar(30),
+Post varchar(30),
+address varchar(20)
+);
+
+INSERT into employee(
+Empid,
+EmployeeName,
+Post,
+address
+) VALUES ('1','Raju Rastogi','Barber','India');
+
+Alter Table Employee add PRIMARY KEY(EmpId);
+
+Alter Table Employee add Salary decimal;
+
+Alter table Employee DROP salary;
+
+CREATE TABLE department(
+dep_id int PRIMARY KEY AUTO_INCREMENT,
+dep_name varchar(30),
+location varchar(30),
+dep_phone varchar(20)
+);
+
+INSERT into department(
+dep_name,
+location,
+dep_phone
+) VALUES ('CSIT','Kathmandu','9864424125');
+
+
+Alter Table Employee add dep_id decimal;
+Alter Table Employee add Foreign Key(dep_id) references department(dep_id);
+ ALTER Table Employee add salary decimal;
+
+INSERT into employee(
+Empid,
+EmployeeName,
+Post,
+address,
+salary
+) VALUES ('1','Raju','Manager','India','5000');
+
+UPDATE Employee SET salary=salary+5000 WHERE Post="Manager" OR Salary>=5000;
